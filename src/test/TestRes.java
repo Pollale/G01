@@ -17,5 +17,11 @@ public class TestRes {
 	public void testRes3() {
 		assertEquals(1, Res.res(5, 2,2));
 	}
+	
+	@Test
+	public void testResNumWithZero() {
+		assertEquals(3, Res.res(3, 0));
+		assertEquals(-3, Res.res(0, 3));
+	}
 
 }

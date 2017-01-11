@@ -17,5 +17,11 @@ public class TestSum {
 	public void testSum3() {
 		assertEquals(4, Sum.sum(1,1, 2));
 	}
+	
+	@Test
+	public void testSumNumWithZero() {
+		assertEquals(3, Sum.sum(3, 0));
+		assertEquals(3, Sum.sum(0, 3));
+	}
 
 }
