@@ -24,20 +24,32 @@ public class TestRes {
 		assertEquals(-3, Res.res(0, 3));
 	}
 	
+	@Test
+	public void testResNumNeg() {
+		assertEquals(0, Res.res(-3, -3));
+		assertEquals(3, Res.res(0, -3));
+	}
+	
 	@Test(expected=AssertionError.class)
-	public void testRes2Neg() {
+	public void testRes2Fail() {
 		assertEquals(1, Res.res(2, 2));
 	}
 	
 	@Test(expected=AssertionError.class)
-	public void testRes3Neg() {
+	public void testRes3Fail() {
 		assertEquals(0, Res.res(5, 2,2));
 	}
 	
 	@Test(expected=AssertionError.class)
-	public void testResNumWithZeroNeg() {
+	public void testResNumWithZeroFail() {
 		assertEquals(3, Res.res(3, 0));
 		assertEquals(3, Res.res(0, 3));
+	}
+	
+	@Test(expected=AssertionError.class)
+	public void testResNumNegFail() {
+		assertEquals(-6, Res.res(-3, -3));
+		assertEquals(-3, Res.res(0, -3));
 	}
 
 }
