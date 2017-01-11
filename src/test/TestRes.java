@@ -23,5 +23,21 @@ public class TestRes {
 		assertEquals(3, Res.res(3, 0));
 		assertEquals(-3, Res.res(0, 3));
 	}
+	
+	@Test(expected=AssertionError.class)
+	public void testRes2Neg() {
+		assertEquals(1, Res.res(2, 2));
+	}
+	
+	@Test(expected=AssertionError.class)
+	public void testRes3Neg() {
+		assertEquals(0, Res.res(5, 2,2));
+	}
+	
+	@Test(expected=AssertionError.class)
+	public void testResNumWithZeroNeg() {
+		assertEquals(3, Res.res(3, 0));
+		assertEquals(3, Res.res(0, 3));
+	}
 
 }
