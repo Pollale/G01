@@ -12,5 +12,10 @@ public class TestRes {
 	public void testRes2() {
 		assertEquals(0, Res.res(2, 2));
 	}
+	
+	@Test
+	public void testRes3() {
+		assertEquals(1, Res.res(5, 2,2));
+	}
 
 }
